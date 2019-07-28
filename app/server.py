@@ -8,7 +8,7 @@ from io import BytesIO
 from fastai.vision import *
 
 model_file_url = 'https://doc-0k-2o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/nlkk4av13d1rq4csorou6uulahinr9hi/1564336800000/16556590620679276610/*/1ojrsrDSaWHAn_1yPng9k7Q05ShACqsv9?e=download'
-model_file_name = 'model'
+model_file_name = 'export.pkl'
 classes = ['001.ak47', '002.american-flag', '003.backpack', '004.baseball-bat', '005.baseball-glove', '006.basketball-hoop', 
            '007.bat', '008.bathtub', '009.bear', '010.beer-mug', '011.billiards', '012.binoculars', '013.birdbath', '014.blimp', 
            '015.bonsai-101', '016.boom-box', '017.bowling-ball', '018.bowling-pin', '019.boxing-glove', '020.brain-101', 
@@ -62,11 +62,8 @@ async def download_file(url, dest):
             with open(dest, 'wb') as f: f.write(data)
 
 async def setup_learner():
-    await download_file(model_file_url, path/'models'/f'{model_file_name}.pth')
-    data_bunch = ImageDataBunch.single_from_classes(path, classes,
-        ds_tfms=get_transforms(), size=224).normalize(imagenet_stats)
-    learn = create_cnn(data_bunch, models.resnet34, pretrained=False)
-    learn.load(model_file_name)
+    await download_file(export_file_url, path/export_file_name)
+    learn = load_learner(path, export_file_name)
     return learn
 
 loop = asyncio.get_event_loop()
