@@ -7,7 +7,7 @@ from io import BytesIO
 
 from fastai.vision import *
 
-model_file_url = 'https://doc-08-5g-docs.googleusercontent.com/docs/securesc/4v0gr43qsevh0o03dri6g4nvgvlb7abn/ji54cf8fpvsdsgfet2iof2jsthlkn430/1564336800000/16556590620679276610/16556590620679276610/1ojrsrDSaWHAn_1yPng9k7Q05ShACqsv9?e=download'
+model_file_url = 'https://doc-0k-2o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/nlkk4av13d1rq4csorou6uulahinr9hi/1564336800000/16556590620679276610/*/1ojrsrDSaWHAn_1yPng9k7Q05ShACqsv9?e=download'
 model_file_name = 'model'
 classes = ['001.ak47', '002.american-flag', '003.backpack', '004.baseball-bat', '005.baseball-glove', '006.basketball-hoop', 
            '007.bat', '008.bathtub', '009.bear', '010.beer-mug', '011.billiards', '012.binoculars', '013.birdbath', '014.blimp', 
