@@ -7,7 +7,7 @@ from io import BytesIO
 
 from fastai.vision import *
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1ojrsrDSaWHAn_1yPng9k7Q05ShACqsv9'
+model_file_url = 'https://drive.google.com/uc?export=download&id=1m0GhWcYJaYX9wSbjHxMECi68B8pURcxJ'
 model_file_name = 'export.pkl'
 classes = ['001.ak47', '002.american-flag', '003.backpack', '004.baseball-bat', '005.baseball-glove', '006.basketball-hoop', 
            '007.bat', '008.bathtub', '009.bear', '010.beer-mug', '011.billiards', '012.binoculars', '013.birdbath', '014.blimp', 
